@@ -1,0 +1,12 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "app",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0",
+    "start": "node index.js"
+  },
+  "author": "croissantco.in",
+  "license": "GPL-3.0"
+}

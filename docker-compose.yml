@@ -1,0 +1,61 @@
+version: "3"
+services:
+
+  frodo:
+    tty: "true"
+    image: "bitnami/node:latest"
+    volumes:
+      - "./app:/app"
+    networks:
+      - "mordor"
+    ports:
+      - "9001"
+    environment:
+      NODE_ENV: "development"
+      RING0_ROLE: "frodo"
+    command: sh -c 'npm install && npm start'
+
+  gandalf:
+    tty: "true"
+    image: "bitnami/node:latest"
+    volumes:
+      - "./app:/app"
+    networks:
+      - "mordor"
+    ports:
+      - "9001"
+    environment:
+      NODE_ENV: "development"
+      RING0_ROLE: "gandalf"
+    command: sh -c 'npm install && npm start'
+
+  samwise:
+    tty: "true"
+    image: "bitnami/node:latest"
+    volumes:
+      - "./app:/app"
+    networks:
+      - "mordor"
+    ports:
+      - "9001"
+    environment:
+      NODE_ENV: "development"
+      RING0_ROLE: "samwise"
+    command: sh -c 'npm install && npm start'
+
+  gollum:
+    tty: "true"
+    image: "bitnami/node:latest"
+    volumes:
+      - "./app:/app"
+    networks:
+      - "mordor"
+    ports:
+      - "9001"
+    environment:
+      NODE_ENV: "development"
+      RING0_ROLE: "gollum"
+    command: sh -c 'npm install && npm start'
+
+networks:
+  mordor:
